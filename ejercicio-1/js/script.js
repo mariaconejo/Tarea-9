@@ -9,22 +9,21 @@ function colorRam() {
 }
 // funcion para cambiar color de los texto al poner el mouse
 function colorChange(event){
-    const paragraphs = event.currentTarget;
-    paragraphs.style.color = colorRam();
-    return paragraphs
+    const change = event.currentTarget;
+    change.style.color = colorRam();
+    
 }
 
 // funcion para poner los textos de nuevo en negro al quitar el mouse
 function blackColor(event){
-    const paragraphs = event.currentTarget;
-    paragraphs.style.color = 'black';
-    return paragraphs
+    const black = event.currentTarget;
+    black.style.color = 'black';
 }
 
-let paragraphs = document.querySelectorAll('p')
 
 
-for(let i = 0; i < paragraphs.length; i++){  // ciclo que recorre los parrafos y los eventos mouseenter y mouseleave
-    paragraphs[i].addEventListener('mouseenter', colorChange);
-    paragraphs[i].addEventListener('mouseleave', blackColor);
+for(let i = 0; i < color.length; i++){  // ciclo que recorre los parrafos y los eventos mouseenter y mouseleave
+    color[i].addEventListener('mouseenter', colorChange);
+    color[i].addEventListener('mouseleave', blackColor);
 }
+
